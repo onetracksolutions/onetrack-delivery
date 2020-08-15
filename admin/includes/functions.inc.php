@@ -4,8 +4,9 @@
 function deliverystatus($status)
 {
     if ($status == "delivered") {
-        echo "btn btn_custom delivered";
+        $dstatus = "btn btn_custom delivered";
     } else {
-        echo "btn btn_custom transit";
+        $dstatus =  "btn btn_custom transit";
     }
+    return $dstatus;
 }

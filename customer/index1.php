@@ -1,48 +1,100 @@
-<?php include("includes/header-admin.inc.php"); ?>
+<?php include("includes/header-customer.inc.php"); ?>
 
 <div class="wrapper">
-
+  <!-- Sidebar  -->
   <nav id="sidebar">
-
     <div class="sidebar-header">
-      <h3><a href="index.php"><img class="logo" src="images/logo-admin.png" alt="Logo" /></a></h3>
+      <h3><a href="dashboard.php"><img src="images/logo-customer.png" alt="Logo" width="160" height="69" /></a></h3>
     </div>
 
-    <ul class="components list-group">
-      <a href="index.php" class="list-group-item list-group-item-action"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
-      <a href="deliverystatus.php" class="active list-group-item list-group-item-action"> Delivery Status</a>
-      <a href="customers.php" class="list-group-item list-group-item-action"> Customers</a>
-      <a href="drivers.php" class="list-group-item list-group-item-action"><i class="fas fa-truck"></i> Drivers</a>
-      <a href="staff.php" class="list-group-item list-group-item-action"> Staff</a>
-      <a href="reports.php" class="list-group-item list-group-item-action"> Reports</a>
-      <a href="drivertracklog.php" class="list-group-item list-group-item-action"> Driver Track Log</a>
-      <a href="settings.php" class="list-group-item list-group-item-action"><i class="fas fa-cogs"></i> Settings</a>
+    <ul class="list-unstyled components">
+      <!-- <p>Dummy Heading</p>-->
+      <li class="active"><a href="index.php">Dashboard</a></li>
     </ul>
 
   </nav>
 
+  <!-- Page Content  -->
   <div id="content">
+
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
+
         <button type="button" id="sidebarCollapse" class="btn btn-transparent">
           <i class="fas fa-bars"></i>
         </button>
+
+        <!-- <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-align-justify"></i>
+          </button> -->
+
+        <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="nav navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Page</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Page</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Page</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Page</a>
+              </li>
+            </ul>
+          </div> -->
       </div>
     </nav>
 
-    <div class="status-area container-fluid">
+    <div class="container-fluid">
+
       <div class="row">
         <div class="col-12 py-5">
           <span id="dateToday"></span>
         </div>
       </div>
-    </div>
 
-    <div class="container-fluid">
+
+      <div class="counter">
+        <div class="container">
+          <div class="row">
+            <div class="column">
+              <div class="orders">
+                <p class="counter-count">10</p>
+                <p class="orders-p">ORDERS</p>
+              </div>
+            </div>
+
+
+
+            <div class="column">
+              <div class="delivered">
+                <p class="counter-count">7</p>
+                <p class="delivered-p">DELIVERED</p>
+              </div>
+            </div>
+
+
+            <div class="column">
+              <div class="intransit">
+                <p class="counter-count">3</p>
+                <p class="intransit-p">In-Transit</p>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+
+
+
+
       <div class="row">
         <div class="col-12">
           <table class="table table-bordered table-hover">
-            <thead id="deliveries" class="thead-light">
+            <thead class="thead-light">
               <tr>
                 <th scope="col">#</th>
                 <th scope="col">Name</th>

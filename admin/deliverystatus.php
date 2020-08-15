@@ -5,10 +5,12 @@
 
 <?php
 
-$sql = "SELECT deliveryid, orderid, delivery_date, CONCAT(firstname, ' ', lastname) AS driver,";
-$sql .= " delivery_address, delivery_status, feedback";
-$sql .= " FROM tbldelivery";
-$sql .= " INNER JOIN tbldriver ON tbldelivery.driverid = tbldriver.driverid";
+$sql = "SELECT t1.deliveryid, t1.orderid, t1.delivery_date, CONCAT(t2.firstname, ' ', t2.lastname) AS driver,";
+$sql .= " t3.phone, CONCAT(t3.firstname, ' ', t3.lastname) AS customer,";
+$sql .= " t1.delivery_address, t1.delivery_status, t1.feedback";
+$sql .= " FROM tbldelivery AS t1";
+$sql .= " INNER JOIN tbldriver AS t2 ON t1.driverid = t2.driverid";
+$sql .= " INNER JOIN tblcustomer AS t3 ON t1.customerid = t3.customerid";
 
 $query = mysqli_query($connect, $sql);
 
@@ -65,9 +67,9 @@ $query = mysqli_query($connect, $sql);
               <tr>
                 <th scope="col">Order No.</th>
                 <th scope="col">Date</th>
-                <!-- <th scope="col">Customer</th> -->
+                <th scope="col">Customer</th>
                 <th scope="col">Address</th>
-                <!-- <th scope="col">Contact#</th> -->
+                <th scope="col">Contact#</th>
                 <th scope="col">Driver</th>
                 <th scope="col">Status</th>
                 <th scope="col">Feedback</th>
@@ -83,7 +85,9 @@ $query = mysqli_query($connect, $sql);
                   <tr>
                     <td><?php echo $row['orderid']; ?></td>
                     <td><?php echo $row['delivery_date']; ?></td>
+                    <td><?php echo $row['customer']; ?></td>
                     <td><?php echo $row['delivery_address']; ?></td>
+                    <td><?php echo $row['phone']; ?></td>
                     <td><?php echo $row['driver']; ?></td>
                     <td>
                       <button class="btn btn_custom delivered">

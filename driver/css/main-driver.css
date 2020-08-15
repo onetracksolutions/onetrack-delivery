@@ -17,7 +17,7 @@ body {
   min-height: 100vh;
   width: 100vw;
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  /* background: #dfecff; */
+  background: #dfecff; 
   color: #7294eb;
   line-height: 1.4;
 }

@@ -3,6 +3,20 @@ body {
     text-align: center; 
 } 
 
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  margin: 0 auto; /* Center website */
+  max-width: 800px; /* Max width */
+  padding: 20px;
+}
+
+
+
 .counter
 {
     background-color: #eaecf0;
@@ -115,16 +129,7 @@ h1 {
 
 /** ------- Driver Rating Summary --- **/
 
-* {
-  box-sizing: border-box;
-}
 
-body {
-  font-family: Arial;
-  margin: 0 auto; /* Center website */
-  max-width: 800px; /* Max width */
-  padding: 20px;
-}
 
 .heading {
   font-size: 25px;

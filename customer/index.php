@@ -1,60 +1,46 @@
-<?php include("includes/header-customer.inc.php"); ?>
+<?php session_start(); ?>
 
-<div class="wrapper">
-  <!-- Sidebar  -->
-  <nav id="sidebar">
-    <div class="sidebar-header">
-      <h3><a href="dashboard.php"><img src="images/logo-customer.png" alt="Logo" width="160" height="69" /></a></h3>
-    </div>
+<!DOCTYPE html>
+<html>
 
-    <ul class="list-unstyled components">
-      <!-- <p>Dummy Heading</p>-->
-      <li class="active"><a href="index.php">Dashboard</a></li>
-    </ul>
+<head>
+  <title>OneTrack Delivery | Dashboard</title>
 
-  </nav>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <!-- Page Content  -->
-  <div id="content">
+  <link rel="stylesheet" href="./css/main.css">
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
-        <button type="button" id="sidebarCollapse" class="btn btn-transparent">
-          <i class="fas fa-bars"></i>
-        </button>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous" />
 
-        <!-- <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="fas fa-align-justify"></i>
-          </button> -->
 
-        <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="nav navbar-nav ml-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="#">Page</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Page</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Page</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Page</a>
-              </li>
-            </ul>
-          </div> -->
-      </div>
-    </nav>
+</head>
 
-    <div class="container-fluid">
+<body>
 
-      <div class="row">
-        <div class="col-12 py-5">
-          <span id="dateToday"></span>
+  <div class="wrapper">
+    <div id="content">
+      <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <div class="container-fluid">
+          <div class="sidebar-header">
+            <h3><a href="index.php"><img class="logo" src="images/logo-customer.png" alt="Logo" /></a></h3>
+          </div>
+          <button type="button" id="sidebarCollapse" class="btn btn-transparent">
+            <!-- <i class="fas fa-bars"></i> -->
+          </button>
+        </div>
+      </nav>
+
+      <div class="status-area container-fluid">
+        <div class="row">
+          <div class="col-12 py-5">
+            <span id="dateToday"></span>
+          </div>
         </div>
       </div>
-
 
       <div class="counter">
         <div class="container">
@@ -65,117 +51,126 @@
                 <p class="orders-p">ORDERS</p>
               </div>
             </div>
-
-
-
             <div class="column">
               <div class="delivered">
                 <p class="counter-count">7</p>
                 <p class="delivered-p">DELIVERED</p>
               </div>
             </div>
-
-
             <div class="column">
               <div class="intransit">
                 <p class="counter-count">3</p>
-                <p class="intransit-p">In-Transit</p>
+                <p class="intransit-p">IN-TRANSIT</p>
               </div>
             </div>
-
-
           </div>
         </div>
       </div>
 
+      <div class="search__bar">
+        <input class="form-control" id="myInput" type="text" placeholder="Search..">
+      </div>
 
 
+      <div class="data container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <table id="customers" class="table table-bordered table-hover table-advance">
+              <thead class="thead-light">
+                <tr>
+                  <th scope="col">Order No.</th>
+                  <th scope="col">Date</th>
+                  <th scope="col">Track</th>
+                  <th scope="col">Status</th>
+                  <th scope="col">Feedback</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>202007002</td>
+                  <td>23-Jun-2020</td>
+                  <td>Details</td>
+                  <td><button class="btn success">Delivered</button></td>
+                  <td>Give Feedback</td>
+                </tr>
 
-      <div class="row">
-        <div class="col-12">
-          <table class="table table-bordered table-hover">
-            <thead class="thead-light">
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col">Name</th>
-                <th scope="col">Address</th>
-                <th scope="col">Contact #</th>
-                <th scope="col">Landmark</th>
-                <th scope="col">Driver</th>
-                <th scope="col">Status</th>
-              </tr>
-            </thead>
+                <tr>
+                  <td>202007001</td>
+                  <td>23-Jun-2020</td>
+                  <td>Details</td>
+                  <td><button class="btn success">Delivered</button></td>
+                  <td>Give Feedback</td>
+                </tr>
 
-            <tbody>
-              <tr>
-                <td>001</td>
-                <td>Mary Blake</td>
-                <td>2 Jasmine Rd, Lyssons Road, Morant Bay</td>
-                <td>876-482-2215</td>
-                <td>Sandras Place</td>
-                <td>Tommy Walters</td>
-                <td>Delivered</td>
-              </tr>
-              <tr>
-                <td>003</td>
-                <td>John Riley</td>
-                <td>6 Waffle Street, Lyssons Road, Morant Bay</td>
-                <td>876-385-9255</td>
-                <td>Rodney Center</td>
-                <td>Neko Watson</td>
-                <td>Delivered</td>
-              </tr>
-              <tr>
-                <td>007</td>
-                <td>Xavier's Pharmacy</td>
-                <td>13 Simms Avenue, Albion</td>
-                <td>876-455-6325</td>
-                <td>Tunam Plaza</td>
-                <td>Tom Miles</td>
-                <td>In Transit</td>
-              </tr>
-              <tr>
-                <td>013</td>
-                <td>One Stop Pharmacy</td>
-                <td>24 Lison Road Yallahs</td>
-                <td>876-233-6435</td>
-                <td>Drake Apt.</td>
-                <td>Jerry Lawson</td>
-                <td>Delivered</td>
-              </tr>
-              <tr>
-                <td>016</td>
-                <td>In Town Pharmacy</td>
-                <td>10 Queen LStreet, Morant Bay PO, St. Thomas</td>
-                <td>876-245-2637</td>
-                <td>Court House</td>
-                <td>Synthia Spense</td>
-                <td>In Transit</td>
-              </tr>
-              <tr>
-                <td>033</td>
-                <td>Albion Health Center</td>
-                <td>10 Shanti Drive, Yallahs, St. Thomas</td>
-                <td>876-473-1625</td>
-                <td>Police Station</td>
-                <td>Edward Blake</td>
-                <td>In Transit</td>
-              </tr>
-              <tr>
-                <td>067</td>
-                <td>Princess Margaret Hospital</td>
-                <td>52 Lyssons Road, Yallahs, St. Thomas</td>
-                <td>876-245-2637</td>
-                <td>Post Office</td>
-                <td>Nuke Lawrence</td>
-                <td>Delivered</td>
-              </tr>
-            </tbody>
-          </table>
+                <tr>
+                  <td>202007005</td>
+                  <td>23-Jun-2020</td>
+                  <td>Details</td>
+                  <td><button class="btn success">Delivered</button></td>
+                  <td>Give Feedback</td>
+                </tr>
+
+                <tr>
+                  <td>202007007</td>
+                  <td>23-Jun-2020</td>
+                  <td>Details</td>
+                  <td><button class="btn success">Delivered</button></td>
+                  <td>Give Feedback</td>
+                </tr>
+
+                <tr>
+                  <td>202007009</td>
+                  <td>23-Jun-2020</td>
+                  <td>Details</td>
+                  <td><button class="btn success">Delivered</button></td>
+                  <td>Give Feedback</td>
+                </tr>
+
+                <tr>
+                  <td>202007010</td>
+                  <td>23-Jun-2020</td>
+                  <td>Details</td>
+                  <td><button class="btn success">Delivered</button></td>
+                  <td>Give Feedback</td>
+                </tr>
+
+                <tr>
+                  <td>202007003</td>
+                  <td>23-Jun-2020</td>
+                  <td>Details</td>
+                  <td><button class="btn transit">In-Transit</button></td>
+                  <td>Give Feedback</td>
+                </tr>
+
+                <tr>
+                  <td>202007013</td>
+                  <td>23-Jun-2020</td>
+                  <td>Details</td>
+                  <td><button class="btn transit">In-Transit</button></td>
+                  <td>Give Feedback</td>
+                </tr>
+
+                <tr>
+                  <td>202007012</td>
+                  <td>23-Jun-2020</td>
+                  <td>Details</td>
+                  <td><button class="btn success">Delivered</button></td>
+                  <td>Give Feedback</td>
+                </tr>
+
+                <tr>
+                  <td>202007004</td>
+                  <td>23-Jun-2020</td>
+                  <td>Details</td>
+                  <td><button class="btn transit">In-Transit</button></td>
+                  <td>Give Feedback</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 
-<?php include("includes/footer-admin.inc.php"); ?>
+  <?php include("includes/footer-customer.inc.php"); ?>

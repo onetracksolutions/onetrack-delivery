@@ -6,11 +6,11 @@
         <ul>
             <li>
                 <a href="#">
-                    <div class="avatar_wrapper">
+                    <!-- <div class="avatar_wrapper">
                         <span class="avatar"><img src="images/avatar1.svg" alt="avatar" /></span>
                         <span class="name">Martha Jones</span>
                         <i class="fas fa-chevron-down"></i>
-                    </div>
+                    </div> -->
                 </a>
 
                 <div>
