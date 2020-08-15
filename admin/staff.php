@@ -44,7 +44,7 @@ $query = mysqli_query($connect, $sql);
         </div>
       </div>
 
-      <a href='add_delivery.php'><button class='btn btn-primary btn-xs'>Add Employee</button></a>
+      <a href='addemployee.php'><button class='btn btn-primary btn-xs'>Add Employee</button></a>
     </div>
 
     <div class="container-fluid">

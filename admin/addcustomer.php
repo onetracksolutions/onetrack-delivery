@@ -5,7 +5,7 @@
     <div class="container">
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-                <h1 class="h4 mb-4 card-title">Add Employee Details</h1>
+                <h1 class="h4 mb-4 card-title">Add Customer Details</h1>
             </div>
 
             <hr>

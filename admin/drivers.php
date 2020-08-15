@@ -43,7 +43,7 @@ $query = mysqli_query($connect, $sql);
           <span id="dateToday"></span>
         </div>
       </div>
-      <a href='add_delivery.php'><button class='btn btn-primary btn-xs'>Add Driver</button></a>
+      <a href='adddriver.php'><button class='btn btn-primary btn-xs'>Add Driver</button></a>
     </div>
 
 
