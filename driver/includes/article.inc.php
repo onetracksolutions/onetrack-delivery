@@ -4,7 +4,7 @@
             <a href="#"><i class="far fa-clock"></i> Time: 3:00pm <span>Delivery</span></a>
         </li>
         <li>
-            <a href="#"><i class="far fa-list-alt"></i> Order#: 118016</a>
+            <a href="order_details.php"><i class="far fa-list-alt"></i> Order#: 118016</a>
         </li>
         <li>
             <a href="#"><i class="fas fa-user-tie"></i> Customer: David Brown</a>

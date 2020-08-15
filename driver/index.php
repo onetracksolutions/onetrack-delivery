@@ -1,6 +1,6 @@
 <?php include("includes/header.inc.php"); ?>
 
-<div class="wrapper">
+<div class="wrapper container-fluid">
 
     <?php include("includes/navbar.inc.php"); ?>
     <?php include("includes/status-area.inc.php"); ?>

@@ -1,8 +1,8 @@
 /** ------- Counters for CustomerHome ------  **/
-body { 
-    text-align: center; 
-} 
-
+body {
+  text-align: center;
+  background-color: black;
+}
 
 * {
   box-sizing: border-box;
@@ -10,69 +10,67 @@ body {
 
 body {
   font-family: Arial;
-  margin: 0 auto; /* Center website */
-  max-width: 800px; /* Max width */
+  margin: 0 auto;
+  width: 100%;
   padding: 20px;
 }
 
-
-
-.counter
-{
-    background-color: #eaecf0;
-    text-align: center;
+.counter {
+  background-color: #eaecf0;
+  text-align: center;
 }
-.orders,.delivered,.intransit
-{
-    margin-top: 70px;
-    margin-bottom: 70px;
+.orders,
+.delivered,
+.intransit {
+  margin-top: 70px;
+  margin-bottom: 70px;
 }
-.counter-count
-{
-    font-size: 18px;
-    background-color: #5f77ac;
-    border-radius: 50%;
-    position: relative;
-    color: #ffffff;
-    text-align: center;
-    line-height: 92px;
-    width: 92px;
-    height: 92px;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
-    display: inline-block;
+.counter-count {
+  font-size: 18px;
+  background-color: #5f77ac;
+  border-radius: 50%;
+  position: relative;
+  color: #ffffff;
+  text-align: center;
+  line-height: 92px;
+  width: 92px;
+  height: 92px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  display: inline-block;
 }
 
-.orders-p,.delivered-p,.intransit-p
-{
-    font-size: 24px;
-    color: #000000;
-    line-height: 20px;
+.orders-p,
+.delivered-p,
+.intransit-p {
+  font-size: 24px;
+  color: #000000;
+  line-height: 20px;
 }
 
-.column { 
-        float: left; 
-        width: 31%; 
-        padding: 0 5px; 
-    } 
-          
-    .row { 
-        margin: 0 -5px; 
-    } 
-      
-    .row:after { 
-        content: ""; 
-        display: table; 
-    } 
-h1 { 
-        color: #010201; 
-    } 
-          
-    { 
-        box-sizing: border-box; 
-    } 
+.column {
+  float: left;
+  width: 31%;
+  padding: 0 5px;
+}
+
+.row {
+  margin: 0 -5px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+}
+h1 {
+  color: #010201;
+}
+
+ {
+  box-sizing: border-box;
+}
 
 /** ------- OrderTable for CustomerHome ------  **/
 
@@ -82,14 +80,19 @@ h1 {
   width: 100%;
 }
 
-#customers td, #customers th {
+#customers td,
+#customers th {
   border: 1px solid #ddd;
   padding: 8px;
 }
 
-#customers tr:nth-child(even){background-color: #f2f2f2;}
+#customers tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
 
-#customers tr:hover {background-color: #ddd;}
+#customers tr:hover {
+  background-color: #ddd;
+}
 
 #customers th {
   padding-top: 12px;
@@ -99,23 +102,22 @@ h1 {
   color: white;
 }
 
-
 /** ------- OrderTable Buttons for CustomerHome ------  **/
 
 .success {
-    background-color: #4CAF50;
+  background-color: #4caf50;
 } /* Green */
 
 .success:hover {
-    background-color: #46a049;
+  background-color: #46a049;
 }
 
 .transit {
-    background-color: #ff9800;
+  background-color: #ff9800;
 } /* Orange */
 
 .transit:hover {
-    background: #e68a00;
+  background: #e68a00;
 }
 
 .btn {
@@ -126,10 +128,7 @@ h1 {
   cursor: pointer;
 }
 
-
 /** ------- Driver Rating Summary --- **/
-
-
 
 .heading {
   font-size: 25px;
@@ -148,11 +147,11 @@ h1 {
 .side {
   float: left;
   width: 15%;
-  margin-top:10px;
+  margin-top: 10px;
 }
 
 .middle {
-  margin-top:10px;
+  margin-top: 10px;
   float: left;
   width: 70%;
 }
@@ -178,22 +177,42 @@ h1 {
 }
 
 /* Individual bars */
-.bar-5 {width: 60%; height: 18px; background-color: #2196F3;}
-.bar-4 {width: 30%; height: 18px; background-color: #2196F3;}
-.bar-3 {width: 10%; height: 18px; background-color: #2196F3;}
-.bar-2 {width: 4%; height: 18px; background-color: #ff9800;}
-.bar-1 {width: 15%; height: 18px; background-color: #f44336;}
+.bar-5 {
+  width: 60%;
+  height: 18px;
+  background-color: #2196f3;
+}
+.bar-4 {
+  width: 30%;
+  height: 18px;
+  background-color: #2196f3;
+}
+.bar-3 {
+  width: 10%;
+  height: 18px;
+  background-color: #2196f3;
+}
+.bar-2 {
+  width: 4%;
+  height: 18px;
+  background-color: #ff9800;
+}
+.bar-1 {
+  width: 15%;
+  height: 18px;
+  background-color: #f44336;
+}
 
 /* Responsive layout - make the columns stack on top of each other instead of next to each other */
 @media (max-width: 400px) {
-  .side, .middle {
+  .side,
+  .middle {
     width: 100%;
   }
   .right {
     display: none;
   }
 }
-
 
 .rating {
   display: inline-block;
@@ -260,7 +279,3 @@ h1 {
   color: #000;
   text-shadow: 0 0 5px #09f;
 }
-
-
-
-

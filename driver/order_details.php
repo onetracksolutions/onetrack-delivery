@@ -151,9 +151,9 @@
         .status_area {
             display: flex;
             align-items: center;
-            /* justify-content: space-around; */
+            justify-content: flex-start;
             padding: 50px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
 
         }
 
@@ -161,9 +161,8 @@
             display: grid;
             grid-template-columns: 1fr;
             grid-template-rows: auto;
-            grid-gap: 20px;
             align-items: center;
-            justify-content: space-evenly;
+            justify-content: center;
             padding: 50px;
 
         }
@@ -175,10 +174,9 @@
             min-width: 100%;
             padding: 50px 10px;
 
-            color: #444;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 
-            transition: all 0.1s ease-in;
+
+
         }
 
         article ul {
@@ -193,7 +191,7 @@
 
         article:hover {
             top: -2px;
-            box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+
         }
 
         .confirmation {
@@ -338,7 +336,90 @@
                 text-align: center;
             }
         }
+
+        .press {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
     </style>
 </head>
 
 <body>
+
+
+    <div class="wrapper container-fluid">
+
+        <header>
+            <div class="logo">
+                <a href="#"><img src="images/logo1.png" alt="" class="logo" /></a>
+            </div>
+
+        </header>
+        <section class="main_area">
+            <section class="status_area">
+                <div class="date">
+                    <h3>Order#: </h3>
+                </div>
+            </section>
+
+
+            <article>
+                <ul>
+                    <li>
+                        <a href="#"><i class="fas fa-peace"></i> Driver: </a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-id-card"></i> Contact#: </a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-envelope-open-text"></i> Email: </a>
+                    </li>
+                    <li>
+                        <form>
+                            <textarea name="comments" rows="5" cols="100">Comment</textarea>
+                        </form>
+                    </li>
+                    <li class="press">
+                        <a href="#"><i class="fas fa-signature fa-3x"></i></a>
+                        <a href="#"><i class="fas fa-street-view fa-3x"></i></a>
+                        <a href="#"><i class="fas fa-camera fa-3x"></i></a>
+
+                    </li>
+                    <br />
+                    <li>
+                        <a href="#"><i class="fas fa-map-marked-alt"></i> Address: </a>
+                    </li>
+                </ul>
+
+                <div class="confirmation">
+                    <a href="#"><button class="reject">Arrival</button></a>
+                    <a href="#"><button class="accept">Cancel</button></a>
+                </div>
+            </article>
+        </section>
+
+    </div>
+
+    <footer class="footer">
+        <div class="footer_copyright">Copyright &copy; 2020 Protech, All rights reserved</div>
+        <div class="footer_terms">
+            <a href="#" class="footer_terms_text">Terms of Use</a>
+            <span class="text-muted mx-2">|</span>
+            <a href="#" class="footer_terms_text">Privacy Policy</a>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
