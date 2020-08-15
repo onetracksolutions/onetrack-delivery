@@ -1,0 +1,163 @@
+<html>
+<head>
+  <!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="CSS/main.css"> 
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+    
+    
+</head>
+
+    <body>
+       
+   <div class="counter">
+    <div class="container">
+        <div class="row">
+           <div class="column">
+                <div class="orders">
+                    <p class="counter-count">10</p>
+                    <p class="orders-p">ORDERS</p>
+                </div>
+            </div>
+
+    
+
+        <div class="column">        
+        <div class="delivered">
+                    <p class="counter-count">7</p>
+                    <p class="delivered-p">DELIVERED</p>
+                </div>
+            </div>
+
+            
+                <div class="column">
+                <div class="intransit">
+                    <p class="counter-count">3</p>
+                    <p class="intransit-p">IN-TRANSIT</p>
+                </div>
+            </div>
+
+            
+            </div> 
+        </div>
+    </div>
+        
+        
+<br><br><br><br>
+  
+        
+        <input class="form-control" id="myInput" type="text" placeholder="Search..">
+        
+  <br>
+        
+ <table id="customers">
+  <tr>
+    <th>Order No.</th>
+    <th>Date</th>
+    <th>Track</th>
+    <th>Status</th>
+    <th>Feedback</th>
+  </tr>
+     
+  <tr>
+    <td>202007002</td>
+    <td>23-Jun-2020</td>
+    <td>Details</td>
+    <td><button class="btn success">Delivered</button></td>
+    <td>Give Feedback</td>
+  </tr>
+     
+  <tr>
+    <td>202007001</td>
+    <td>23-Jun-2020</td>
+    <td>Details</td>
+    <td><button class="btn success">Delivered</button></td>
+    <td>Give Feedback</td>
+  </tr>
+     
+  <tr>
+    <td>202007005</td>
+    <td>23-Jun-2020</td>
+    <td>Details</td>
+    <td><button class="btn success">Delivered</button></td>
+    <td>Give Feedback</td>
+  </tr>
+     
+  <tr>
+    <td>202007007</td>
+    <td>23-Jun-2020</td>
+    <td>Details</td>
+    <td><button class="btn success">Delivered</button></td>
+    <td>Give Feedback</td>
+  </tr>
+     
+  <tr>
+    <td>202007009</td>
+    <td>23-Jun-2020</td>
+    <td>Details</td>
+    <td><button class="btn success">Delivered</button></td>
+    <td>Give Feedback</td>
+  </tr>
+     
+  <tr>
+    <td>202007010</td>
+    <td>23-Jun-2020</td>
+      <td>Details</td>
+    <td><button class="btn success">Delivered</button></td>
+    <td>Give Feedback</td>
+  </tr>
+     
+  <tr>
+    <td>202007003</td>
+    <td>23-Jun-2020</td>
+       <td>Details</td>
+    <td><button class="btn transit">In-Transit</button></td>
+    <td>Give Feedback</td>
+  </tr>
+     
+  <tr>
+    <td>202007013</td>
+    <td>23-Jun-2020</td>
+    <td>Details</td>
+    <td><button class="btn transit">In-Transit</button></td>
+    <td>Give Feedback</td>
+  </tr>
+     
+  <tr>
+    <td>202007012</td>
+    <td>23-Jun-2020</td>
+    <td>Details</td>
+    <td><button class="btn success">Delivered</button></td>
+    <td>Give Feedback</td>
+  </tr>
+     
+  <tr>
+    <td>202007004</td>
+    <td>23-Jun-2020</td>
+    <td>Details</td>
+    <td><button class="btn transit">In-Transit</button></td>
+    <td>Give Feedback</td>
+  </tr>
+     
+</table>  
+        
+     
+          <script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#customers tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+            
+            
+         
+</script>
+   
+    </body>
+</html>
