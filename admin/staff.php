@@ -16,12 +16,13 @@ $query = mysqli_query($connect, $sql);
 
     <ul class="components list-group">
       <a href="index.php" class="list-group-item list-group-item-action"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
-      <a href="deliverystatus.php" class="list-group-item list-group-item-action"> Delivery Status</a>
-      <a href="customers.php" class="list-group-item list-group-item-action"> Customers</a>
+      <a href="deliverystatus.php" class="list-group-item list-group-item-action"><i class="fas fa-box-open"></i> Delivery Status</a>
+      <a href="customers.php" class="list-group-item list-group-item-action"><i class="fas fa-user-alt"></i> Customers</a>
       <a href="drivers.php" class="list-group-item list-group-item-action"><i class="fas fa-truck"></i> Drivers</a>
-      <a href="staff.php" class="active list-group-item list-group-item-action"> Staff</a>
-      <a href="reports.php" class="list-group-item list-group-item-action"> Reports</a>
-      <a href="drivertracklog.php" class="list-group-item list-group-item-action"> Driver Track Log</a>
+      <a href="staff.php" class="active list-group-item list-group-item-action"><i class="fas fa-user-tie"></i> Staff</a>
+      <a href="#" class="list-group-item list-group-item-action"><i class="fas fa-map-marked-alt"></i> Zones</a>
+      <a href="reports.php" class="list-group-item list-group-item-action"><i class="fas fa-file-powerpoint"></i> Reports</a>
+      <a href="drivertracklog.php" class="list-group-item list-group-item-action"><i class="fas fa-map-marked-alt"></i> Driver Track Log</a>
       <a href="settings.php" class="list-group-item list-group-item-action"><i class="fas fa-cogs"></i> Settings</a>
     </ul>
 

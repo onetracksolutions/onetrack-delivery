@@ -80,6 +80,7 @@ a:focus {
   padding: 15px 20px;
   font-size: 1rem;
   display: block;
+  text-transform: uppercase;
 }
 
 .list-group-item.active,
